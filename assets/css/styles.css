@@ -491,7 +491,12 @@ nav {
   #resume .resume-list img {
     max-width: 15px;
     margin-left: 4px; }
-  @media screen and (min-width: 768px) {
+
+.km-icon {
+  max-width: 24px;
+  margin-left: 15px; }
+
+@media screen and (min-width: 768px) {
       nav .nav-menu {
         font-size: 1.33rem;
         -webkit-box-orient: horizontal;
@@ -531,7 +536,8 @@ nav {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
-  @media screen and (orientation: landscape) and (max-width: 767px) {
+
+@media screen and (orientation: landscape) and (max-width: 767px) {
     .header {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
