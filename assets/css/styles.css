@@ -474,15 +474,15 @@ nav {
   left: 50%;
   -webkit-transform-origin: left center;
           transform-origin: left center;
-  -webkit-transform: translateX(-120%) translateY(30%) scaleX(0);
-          transform: translateX(-120%) translateY(30%) scaleX(0);
-  -webkit-transition: -webkit-transform ease 800ms;
-  transition: -webkit-transform ease 800ms;
-  transition: transform ease 800ms;
-  transition: transform ease 800ms, -webkit-transform ease 800ms; }
+  -webkit-transform: translateX(-220%) translateY(30%);
+          transform: translateX(-220%) translateY(30%);
+  opacity: 0;
+  -webkit-transition: all ease 800ms;
+  transition: all ease 800ms; }
   #resume.show, #resume:hover {
-    -webkit-transform: translateX(-120%) translateY(30%) scaleX(1);
-            transform: translateX(-120%) translateY(30%) scaleX(1); }
+    -webkit-transform: translateX(-120%) translateY(30%);
+            transform: translateX(-120%) translateY(30%);
+    opacity: 1; }
   #resume h3 {
     background: #ff2365;
     background: linear-gradient(325deg, rgba(0, 234, 132, 0.9), rgba(19, 145, 242, 0.9), rgba(141, 35, 255, 0.9), rgba(255, 35, 101, 0.9));
@@ -503,13 +503,18 @@ nav {
             justify-content: flex-start; }
     #resume .resume-list li {
       margin-left: 15px; }
+    #resume .resume-list a {
+      font-size: 3rem;
+      font-weight: 100; }
     #resume .resume-list img {
       max-width: 15px;
       margin-left: 4px; }
 
 .km-icon {
-  width: 24px;
-  margin-left: 15px; }
+  width: 16px;
+  margin-left: 5px;
+  position: relative;
+  top: -2px; }
 
 @media screen and (min-width: 768px) {
       nav .nav-menu {
