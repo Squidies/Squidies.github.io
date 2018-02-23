@@ -1,0 +1,311 @@
+/* ~sanitize.css */
+/* ~mixins */
+/* ~vars */
+html,
+body {
+  height: 100%;
+  background: #161616;
+  color: #f4f4f4;
+  font-family: "program", sans-serif;
+  font-style: italics;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-animation: 3s ease 0s 1 nocursing;
+          animation: 3s ease 0s 1 nocursing;
+}
+
+a {
+  background-image: linear-gradient(45deg, #c95a50 0%, #c95a50 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: -250% 100%;
+  -webkit-transition: background-size 1s ease;
+  transition: background-size 1s ease;
+  font-family: "proxima-nova", sans-serif;
+  color: #f4f4f4;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  width: inherit;
+  min-height: inherit;
+  padding: 16px;
+  margin: 4px auto;
+  z-index: 10;
+}
+a::after {
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(transparent)), -webkit-gradient(linear, left bottom, left top, from(transparent), to(transparent)), -webkit-gradient(linear, right top, left top, from(transparent), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  background-image: linear-gradient(to right, transparent 0%, transparent 100%), linear-gradient(to top, transparent 0%, transparent 100%), linear-gradient(to left, transparent 0%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 100%);
+  background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+  background-position: 100% 100%, 0 0, 0 0, 100% 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: 100%;
+  z-index: -1;
+  padding: 8px;
+  content: "";
+}
+a:hover, a.on {
+  background-size: 250% 100%;
+  color: #dfc693;
+}
+a:hover::after, a.on::after {
+  background-image: -webkit-gradient(linear, left top, right top, from(#dfc693), to(transparent)), -webkit-gradient(linear, left bottom, left top, from(#dfc693), to(transparent)), -webkit-gradient(linear, right top, left top, from(#dfc693), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(#dfc693), to(transparent));
+  background-image: linear-gradient(to right, #dfc693 0%, transparent 100%), linear-gradient(to top, #dfc693 0%, transparent 100%), linear-gradient(to left, #dfc693 0%, transparent 100%), linear-gradient(to bottom, #dfc693 0%, transparent 100%);
+  background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+  background-position: 100% 100%, 0 0, 0 0, 100% 0;
+}
+a.ico g {
+  fill: blue;
+}
+a:hover .ico g {
+  fill: #dfc693;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background: #161616;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.content h1,
+.content h2 {
+  position: relative;
+  margin: 0;
+  text-shadow: 1px 1px 0 #161616;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-animation: 3s ease 0s 1 slidein;
+          animation: 3s ease 0s 1 slidein;
+}
+.content h1 {
+  top: -10rem;
+  font-size: 2.33rem;
+  font-weight: 100;
+}
+.content h2 {
+  top: -10rem;
+  font-size: 2rem;
+  font-family: "cortado", serif;
+}
+.content h1.on,
+.content h2.on {
+  color: #dfc693;
+  text-shadow: 1px 1px 0 black;
+}
+.content h1.on {
+  -webkit-transform: scale(1.33) translateY(-150%);
+          transform: scale(1.33) translateY(-150%);
+}
+.content h2.on {
+  -webkit-transform: scale(1.33) translateY(-100%);
+          transform: scale(1.33) translateY(-100%);
+}
+.content:hover {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+nav {
+  width: 100%;
+  color: transparent;
+}
+nav a {
+  max-width: 250px;
+}
+nav ul {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  margin: -25px auto;
+  padding: 0;
+}
+nav li {
+  display: block;
+  width: 100%;
+  min-height: 16px;
+  padding: 4px;
+  text-align: center;
+}
+nav li:nth-of-type(n + 1) {
+  -webkit-animation: 3s ease 150ms 1 forwards slidein;
+          animation: 3s ease 150ms 1 forwards slidein;
+}
+nav li:nth-of-type(n + 2) {
+  -webkit-animation: 3s ease 300ms 1 forwards slidein;
+          animation: 3s ease 300ms 1 forwards slidein;
+}
+nav li:nth-of-type(n + 3) {
+  -webkit-animation: 3s ease 450ms 1 forwards slidein;
+          animation: 3s ease 450ms 1 forwards slidein;
+}
+nav .ico {
+  max-height: 18px;
+}
+
+.sunburst {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1e1e1e;
+  -webkit-transition: background 1s ease;
+  transition: background 1s ease;
+}
+.sunburst svg {
+  min-width: 400%;
+  min-height: 400%;
+}
+.sunburst path,
+.sunburst circle {
+  -webkit-transition: fill 1s ease;
+  transition: fill 1s ease;
+  fill: black;
+}
+.sunburst.on {
+  background: #dfc693;
+}
+.sunburst.on path,
+.sunburst.on circle {
+  fill: #c95a50;
+}
+
+@media screen and (min-width: 540px) {
+  .sunburst svg {
+    min-width: 200%;
+    min-height: 200%;
+  }
+
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .content h1.on {
+    -webkit-transform: scale(2) translate(0%, -100%);
+            transform: scale(2) translate(0%, -100%);
+  }
+
+  .content h2.on {
+    -webkit-transform: scale(2) translate(-5%, -75%);
+            transform: scale(2) translate(-5%, -75%);
+  }
+}
+@media screen and (min-width: 767px) {
+  .sunburst svg {
+    min-width: 300%;
+    min-height: 300%;
+  }
+}
+@media screen and (min-width: 720px) {
+  .content h1.on {
+    -webkit-transform: scale(2) translate(0%, -50%);
+            transform: scale(2) translate(0%, -50%);
+  }
+
+  .content h2.on {
+    -webkit-transform: scale(2) translate(-5%, 0%);
+            transform: scale(2) translate(-5%, 0%);
+  }
+}
+@media screen and (max-width: 1024px) and (max-height: 530px) {
+  .content h1.on {
+    -webkit-transform: scale(1.66) translate(0%, 25%);
+            transform: scale(1.66) translate(0%, 25%);
+  }
+
+  .content h2.on {
+    -webkit-transform: scale(1.33) translate(-5%, 50%);
+            transform: scale(1.33) translate(-5%, 50%);
+  }
+}
+@-webkit-keyframes nocursing {
+  0%,
+100% {
+    cursor: none;
+  }
+  100% {
+    cursor: normal;
+  }
+}
+@keyframes nocursing {
+  0%,
+100% {
+    cursor: none;
+  }
+  100% {
+    cursor: normal;
+  }
+}
+@-webkit-keyframes slidein {
+  0%,
+70% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+    color: transparent;
+  }
+  70%,
+100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    color: #f4f4f4;
+  }
+}
+@keyframes slidein {
+  0%,
+70% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+    color: transparent;
+  }
+  70%,
+100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    color: #f4f4f4;
+  }
+}
