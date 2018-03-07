@@ -1,6 +1,5 @@
 /* ~sanitize.css */
-/* ~mixins */
-/* ~vars */
+
 html,
 body {
   height: 100%;
@@ -27,9 +26,10 @@ body {
 
 a {
   background-image: linear-gradient(45deg, #c95a50 0%, #c95a50 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
-  background-size: -250% 100%;
-  -webkit-transition: background-size 1s ease;
-  transition: background-size 1s ease;
+  background-size: 250% 250%;
+  background-position: 150%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   font-family: "proxima-nova", sans-serif;
   color: #f4f4f4;
   text-decoration: none;
@@ -59,7 +59,8 @@ a::after {
   content: "";
 }
 a:hover, a.on {
-  background-size: 250% 100%;
+  background-size: 250% 250%;
+  background-position: 0;
   color: #dfc693;
 }
 a:hover::after, a.on::after {
@@ -118,7 +119,7 @@ a:hover .ico g {
 .content h1.on,
 .content h2.on {
   color: #dfc693;
-  text-shadow: 1px 1px 0 black;
+  text-shadow: 1px 1px 0 #161616;
 }
 .content h1.on {
   -webkit-transform: scale(1.33) translateY(-150%);
@@ -190,6 +191,18 @@ nav .ico {
   -webkit-transition: background 1s ease;
   transition: background 1s ease;
 }
+
+.sunburst::after {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background: rgba(201, 90, 80, 0);
+  -webkit-transition: background linear 1s;
+  transition: background linear 1s;
+  content: "";
+}
+
 .sunburst svg {
   min-width: 400%;
   min-height: 400%;
@@ -203,6 +216,11 @@ nav .ico {
 .sunburst.on {
   background: #dfc693;
 }
+
+.sunburst.on::after {
+  background: rgba(201, 90, 80, 0.66);
+}
+
 .sunburst.on path,
 .sunburst.on circle {
   fill: #c95a50;
