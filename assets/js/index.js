@@ -2,8 +2,7 @@
 var a = document.getElementsByTagName('a'),
     s = document.getElementById('sun'),
     sun = document.getElementById('sunburst'),
-    // <--- the svg
-h = document.getElementById('header'),
+    h = document.getElementById('header'),
     ht = document.getElementById('headerTagline'),
     windowWidth = window.innerWidth;
 
